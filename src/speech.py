@@ -11,7 +11,7 @@ def speech(text, fname="speech"):
   
 
 def main():
-    speech("Connecticut is the motherland of pizza", "omaba")
+    speech("This is the most epic Minecraft shot you'll ever see", "omaba")
 
 
 if __name__ == '__main__':

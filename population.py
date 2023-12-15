@@ -1,3 +1,5 @@
+# Generates videos along the lines of "9 out of 10 people can't answer this U.S population question, can you?"
+
 import os
 import random
 
@@ -44,12 +46,12 @@ def main():
     default_question = "9 out of 10 people can't answer this U.S population question, can you?"
     
     # If we already have a default speech file, use that
-    if not os.path.exists("speech/question.mp3"):
-        speech(default_question, "question")
+    if not os.path.exists("speech/population_question.mp3"):
+        speech(default_question, "population_question")
 
     specific_question = f"Which has a larger population? {city_1} or {city_2}?"
 
-    speech(specific_question, "question_specific")
+    speech(specific_question, "population_question_specific")
 
     answer = f"The answer is {city_1 if int(result[0][1][1]) > int(result[1][1][1]) else city_2}! "
 
@@ -96,10 +98,10 @@ def main():
 
     # Combine the speech into one speech file called speech/speech.mp3
     # def combine_audio(audio_files, start_times, output_name):
-    combine_audio(["speech/question.mp3", "speech/question_specific.mp3", "speech/answer.mp3"], [0, 5.3, 13], "speech/speech.mp3")
+    combine_audio(["speech/population_question.mp3", "speech/population_question_specific.mp3", "speech/population_answer.mp3"], [0, 5.3, 13], "speech/population_speech.mp3")
 
     # Add speech to the video and output to temp_video/question.mp4
-    add_speech(video_path=video_input, audio_path="speech/speech.mp3", output_name=final_video)
+    add_speech(video_path=video_input, audio_path="speech/population_speech.mp3", output_name=final_video)
 
     # Nuke the temp_video folder
     for filename in os.listdir("temp_video"):
@@ -109,9 +111,9 @@ def main():
     os.rmdir("temp_video")
 
     # Remove speech/sppech.mp3 and speech/question_specific.mp3 and speech/anwser.mp3
-    os.remove("speech/speech.mp3")
-    os.remove("speech/question_specific.mp3")
-    os.remove("speech/answer.mp3")
+    os.remove("speech/spopulation_peech.mp3")
+    os.remove("speech/population_question_specific.mp3")
+    os.remove("speech/population_answer.mp3")
 
 
 if __name__ == '__main__':

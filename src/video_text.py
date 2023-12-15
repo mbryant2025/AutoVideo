@@ -151,12 +151,19 @@ def add_text(text_info, fname, output_name="temp_video/text.mp4"):
 
 def main():
     # Specify text and display time as tuples: (text, display_time)
+    # text_info = [
+    #     ("Hello", 10),
+    #     ("Michael or Jordan?", 12),
+    #     ("Connecticut_56_New York_19", 14),
+    # ]
+    # add_text(text_info, "video.mp4")
+
     text_info = [
-        ("Hello", 10),
-        ("Michael or Jordan?", 12),
-        ("Connecticut_56_New York_19", 14),
+        ("This is the most epic", 0),
+        ("Minecraft shot", 2),
+        ("you'll ever see", 4),
     ]
-    add_text(text_info, "video.mp4")
+    add_text(text_info, "epic_shot2.mp4", "epic_shot3.mp4")
 
 if __name__ == '__main__':
     main()

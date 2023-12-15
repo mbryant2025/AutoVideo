@@ -26,11 +26,13 @@ def add_speech(video_path, audio_path, output_name, start_time=0):
 
 
 def main():
-    add_speech("video.mp4", "speech/question.mp3", "temp_video/question.mp4")
+    # add_speech("video.mp4", "speech/question.mp3", "temp_video/question.mp4")
 
-    add_speech("temp_video/question.mp4", "speech/question_specific.mp3", "temp_video/question2.mp4", start_time=5.5)
+    # add_speech("temp_video/question.mp4", "speech/question_specific.mp3", "temp_video/question2.mp4", start_time=5.5)
 
-    add_speech("temp_video/question2.mp4", "speech/answer.mp3", "temp_video/question3.mp4", start_time=12)
+    # add_speech("temp_video/question2.mp4", "speech/answer.mp3", "temp_video/question3.mp4", start_time=12)
+
+    add_speech("epic_shot.mov", "omaba.mp3", "epic_shot2.mp4", start_time=0)
 
 
 if __name__ == '__main__':
